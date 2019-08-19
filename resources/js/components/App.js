@@ -4,6 +4,8 @@ import queryString from "query-string";
 import ReactDOM from "react-dom";
 
 import Main from "./Main";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 class App extends Component {
     render() {
@@ -12,6 +14,8 @@ class App extends Component {
         return (
             <Fragment>
                 <BrowserRouter>
+                    <Header />
+                    <Sidebar />
                     <Switch>
                         <Route exact path="/main" render={MainComponent} />
                     </Switch>
